@@ -1337,6 +1337,36 @@
     <script>
         // 初始化图片管理器
         const imageManager = new ImageManager();
+
+        // 调试脚本 - 检查 data-service="3" 元素
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('页面加载完成，开始调试...');
+
+            // 查找 data-service="3" 元素
+            const element = document.querySelector('.service-images[data-service="3"]');
+            console.log('找到的元素:', element);
+
+            if (element) {
+                console.log('元素类名:', element.className);
+                console.log('data-service 属性:', element.getAttribute('data-service'));
+                console.log('data-lazy-bg 属性:', element.getAttribute('data-lazy-bg'));
+                console.log('当前背景图片:', window.getComputedStyle(element).backgroundImage);
+
+                // 手动设置背景图片进行测试
+                setTimeout(() => {
+                    element.style.backgroundImage = 'url("images/pet_icon-06.png")';
+                    console.log('手动设置背景图片完成');
+                }, 2000);
+            } else {
+                console.error('未找到 data-service="3" 元素');
+            }
+
+            // 检查图片是否存在
+            const testImg = new Image();
+            testImg.onload = () => console.log('图片 pet_icon-06.png 加载成功');
+            testImg.onerror = () => console.error('图片 pet_icon-06.png 加载失败');
+            testImg.src = 'images/pet_icon-06.png';
+        });
     </script>
 </body>
 
