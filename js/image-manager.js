@@ -96,7 +96,7 @@ class ImageManager {
             { selector: '.slider-image-th', image: 'images/side-view-young-woman-with-dog-against-blue-background.jpg' },
             
             // 特色图标
-            { selector: '.feature-icon', image: 'images/human_icon 1.png' },
+            { selector: '.feature-icon', image: 'images/tick.png' },
             { selector: '.feature-icon-one', image: 'images/trusted_icon 1.png' },
             { selector: '.feature-icon-two', image: 'images/heart_icon 1.png' },
             
