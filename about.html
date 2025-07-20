@@ -74,6 +74,16 @@
                 -ms-user-select: none;
                 user-select: none;
             }
+
+            /* 修复two-column-section中最后一段文字在移动端的换行问题 */
+            .two-column-section .column-left p:last-child {
+                white-space: normal !important;
+                width: auto !important;
+                max-width: 500px !important;
+                line-height: 1.6 !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+            }
         }
 
         /* 所有移动设备都使用固定缩放比例，确保稳定性 */
@@ -507,18 +517,15 @@
 
         /* Two Column Section */
         .two-column-section {
-            padding: 0px 0 0 120px;
+            padding: 0px 0 0 140px;
             display: flex;
-            gap: 40px;
+            gap: 50px;
             background-color: #FFF8EE;
             height: 1027px;
-            max-width: 1440px;
-            overflow: hidden;
         }
 
         .column-left {
             flex: 1;
-            max-width: 580px;
         }
 
         .column-left h3 {
@@ -1366,7 +1373,7 @@
 
             </div>
 
-            <p class="wrap-text" style="margin-top: 40px;">What began as a small local kennel has grown into a place where pets are
+            <p style="margin-top: 40px;">What began as a small local kennel has grown into a place where pets are
                 treated like family.</p>
         </div>
         <div class="column-right">
