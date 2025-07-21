@@ -1100,36 +1100,42 @@ header {
 
 .faq-section .large-text {
     font-size: 55px;
-    margin-bottom: 15px;
+    width: 100%;
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
     color: #422b1c;
 }
 
 .faq-section button {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 800;
-    background-color: #FFDB98;
-    color: #333;
+    background-color: #b1e0ff;
+    color: #422B1C;
     padding: 15px 30px;
     border: none;
     border-radius: 30px;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
-    margin-bottom: 50px;
-    width: 175px;
-    height: 51px;
-    line-height: 20px;
+    margin-bottom: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    position: relative;
+    width: 237px;
+    height: 69px;
+    z-index: 2;
+    transition: all 0.3s ease;
 }
 
 .faq-section button:hover {
-    background-color: #fff5cd;
-    color: #ff9f29;
+    background-color: #eaf0fc;
+    color: #fab15a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .accordion {
+    width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+          margin: -70px 500PX;
+
 }
 
 .accordion-item {

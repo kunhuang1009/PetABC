@@ -79,6 +79,41 @@ body {
         padding: 40px 20px !important;
     }
 
+    .faq-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .faq-section h2 {
+        order: 0 !important;
+    }
+
+    .faq-section .large-text {
+        white-space: normal !important;
+        width: auto !important;
+        max-width: 600px !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+        order: 1 !important;
+    }
+
+    .faq-section button {
+        margin: 30px auto !important;
+        display: block !important;
+        white-space: nowrap !important;
+        order: 3 !important;
+    }
+
+    .accordion {
+        margin: 20px auto 0 auto !important;
+        width: 100% !important;
+        max-width: 600px !important;
+        padding: 0 20px !important;
+        order: 2 !important;
+    }
+
     .accordion-header h3 {
         white-space: normal !important;
         line-height: 1.4 !important;
@@ -668,94 +703,121 @@ header {
     height: 1300px;
 }
 
-.faq-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.faq-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="3" fill="%23ffcc0033" stroke="none"/><circle cx="50" cy="80" r="5" fill="%23b1e0ff33" stroke="none"/><circle cx="80" cy="40" r="4" fill="%23ffcc0033" stroke="none"/></svg>');
+    opacity: 0.1;
+    z-index: 0;
 }
 
-.faq-content h2 {
+.faq-content {
+    position: relative;
+    z-index: 1;
+}
+
+.faq-section h2 {
     font-size: 39px;
+    margin-bottom: 20px;
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     color: #422b1c;
 }
 
-.large-text {
+.faq-section .large-text {
     font-size: 55px;
-    margin-bottom: 15px;
+    width: 100%;
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
     color: #422b1c;
 }
 
-.faq-content button {
-    background-color: #FFDFA3;
-    color: #422b1c;
+.faq-section button {
+    background-color: #b1e0ff;
+    color: #422B1C;
+    padding: 15px 30px;
     border: none;
     border-radius: 30px;
     font-size: 30px;
     cursor: pointer;
-    width: 332px;
-    height: 69px;
-    transition: all 0.3s ease;
+    margin-bottom: 40px;
     font-family: 'Nunito', sans-serif;
     font-weight: 800;
+    position: relative;
+    width: 237px;
+    height: 69px;
+    z-index: 2;
+    transition: all 0.3s ease;
 }
 
-.faq-content button:hover {
-    background-color: #ffeeaa;
-    color: #ff9f29;
+.faq-section button:hover {
+    background-color: #eaf0fc;
+    color: #fab15a;
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .accordion {
     width: 100%;
     max-width: 800px;
-    margin: 50px auto 0;
+          margin: -70px 500PX;
+
 }
 
 .accordion-item {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .accordion-header {
-    padding: 20px 25px;
-    background: #f8f9fa;
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 25px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.accordion-header:hover {
-    background: #e9ecef;
+    height: 124px;
 }
 
 .accordion-header h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
+
+    font-weight: 500;
+    color: #422b1c;
     margin: 0;
-    font-family: 'Nunito', sans-serif;
+    flex: 1;
+    font-size: 25px;
 }
 
-.arrow {
-    width: 20px;
-    height: 20px;
-    position: relative;
+/* 替换原有的.arrow样式 */
+.accordion-header .arrow-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/drop down 5.png");
+    /* 默认状态图片 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     transition: transform 0.3s ease;
 }
 
-.arrow::before {
+.accordion-item.active .arrow-icon {
+    background-image: url("../images/drop down 5 - 副本.png");
+    /* 展开状态图片 */
+}
+
+.accordion-header .arrow::before {
     content: '';
     position: absolute;
     width: 12px;
@@ -767,7 +829,7 @@ header {
     transition: all 0.3s ease;
 }
 
-.arrow::after {
+.accordion-header .arrow::after {
     content: '';
     position: absolute;
     width: 12px;
