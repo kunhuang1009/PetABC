@@ -164,6 +164,8 @@ body {
     .faq-section {
         height: auto !important;
         padding: 40px 20px !important;
+        width: 100% !important;
+        min-width: auto !important;
     }
 
     .faq-content {
@@ -219,9 +221,16 @@ body {
 /* 确保所有元素在移动端保持原有布局 */
 @media screen and (max-width: 768px) {
     .hero, .light-yellow-section, .centered-content-main,
-    .testimonials, .services, .faq-section, footer {
+    .testimonials, .services, footer {
         width: 100% !important;
         min-width: 1440px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    /* FAQ部分使用响应式布局，不强制1440px宽度 */
+    .faq-section {
+        width: 100% !important;
+        min-width: auto !important;
         flex-wrap: nowrap !important;
     }
 
