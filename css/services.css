@@ -114,6 +114,10 @@ body {
         order: 2 !important;
     }
 
+    .accordion-item {
+        white-space: normal !important;
+    }
+
     .accordion-header h3 {
         white-space: normal !important;
         line-height: 1.4 !important;

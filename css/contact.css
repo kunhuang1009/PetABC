@@ -100,6 +100,20 @@ body {
         padding: 0 20px !important;
         order: 2 !important;
     }
+
+    .accordion-item {
+        white-space: normal !important;
+    }
+
+    .accordion-header h3 {
+        white-space: normal !important;
+        line-height: 1.4 !important;
+    }
+
+    .accordion-content p {
+        white-space: normal !important;
+        line-height: 1.6 !important;
+    }
 }
 
 /* 所有移动设备都使用固定缩放比例，确保稳定性 */

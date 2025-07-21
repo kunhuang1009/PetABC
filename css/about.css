@@ -169,6 +169,20 @@ body {
         padding: 0 20px !important;
         order: 2 !important;
     }
+
+    .accordion-item {
+        white-space: normal !important;
+    }
+
+    .accordion-header h3 {
+        white-space: normal !important;
+        line-height: 1.4 !important;
+    }
+
+    .accordion-content p {
+        white-space: normal !important;
+        line-height: 1.6 !important;
+    }
 }
 
 /* 确保所有元素在移动端保持原有布局 */
