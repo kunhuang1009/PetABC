@@ -24,7 +24,18 @@
 
     <!-- 图片加载样式 -->
     <link rel="stylesheet" href="css/image-loading.css">
-    <link rel="stylesheet" href="css/index.css">   
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 203px;
+            height: 80px;
+            background: url("images/Group 44.png");
+            background-size: 100% 100%;
+        }
+    </style>   
 </head>
 
 <body>
@@ -38,14 +49,12 @@
 
         <!-- 桌面端导航 -->
         <nav class="nav-links">
-            <a href="index.html" class="logo-nav">
-                <div class="nav-logo"></div>
-            </a>
+            <a href="home.html">home</a>
             <a href="about.html">about</a>
             <a href="services.html">services</a>
             <a href="contact.html">contact</a>
         </nav>
-
+        <div class="logo"></div>
         <!-- 桌面端CTA按钮 -->
         <a href="contact.html">
             <button class="cta-button">book now</button>
